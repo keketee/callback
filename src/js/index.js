@@ -167,11 +167,14 @@ evenAndOdd([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 // - Crea una función que reciba un array con 5 palabras, debes imprimir por consola un array que contenga la inicial y la última letra de cada palabra en mayúsculas, es decir, si nuestra función recibiera un array con ['hola', 'adios', 'gato', 'perro', 'casa'] deberá imprimir por consola ['H', 'A', 'A', 'S', 'G', 'O', 'P','O', 'C', 'A']. Si te quedas atascado puedes investigar la función flatMap() y flat()
 
 
-const fiveWords = word => {
+const fiveWords = words => {
 
-    const firstLetter = word.map()
+    const firstLetter = words.flatMap(word => {
+        const lastLetter = word.charAt(word.length - 1)
+        return [word.charAt(0).toUpperCase(), lastLetter.toUpperCase()]
+    })
 
-
+    console.log(firstLetter)
 }
 
 fiveWords(['coche', 'perro', 'casa', 'gato', 'camion'])
@@ -180,11 +183,23 @@ fiveWords(['coche', 'perro', 'casa', 'gato', 'camion'])
 
 // - Crea una función que reciba un array de 10 números y te diga si alguno es mayor de 5.
 
+const tenNumbers = numbers => {
 
+    const numberBig = numbers.some(number => {
+        return number > 5
+    })
+    if (numberBig) {
+    } else {
+    }
+    console.log(numberBig)
+}
+tenNumbers([1, 2, 3, 4, 0, 1, 2, 3, 0, 1])
 
 
 
 // - Crea una función que reciba un array de 5 palabras y un número y te devuelva un array con las palabras que tienen esa longitud, por ejemplo si le envias (['hola', 'adios', 'gato', 'perro', 'casa'], 4), te devolverá un array con ['hola', 'gato', 'casa']
+
+
 
 
 
