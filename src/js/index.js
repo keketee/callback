@@ -202,19 +202,26 @@ tenNumbers([1, 2, 3, 4, 0, 1, 2, 3, 0, 1])
 
 const fiveWordAndLetter = (array, number) => {
 
-
-
-
+    const words = array.filter(word => {
+        return word.length === number
+    })
+    console.log(words)
 }
 
-fiveWordAndLetter(['coche', 'perro', 'casa', 'gato', 'camion'], 5)
-
-
+fiveWordAndLetter(['coche', 'perro', 'casa', 'gato', 'camion'], 4)
 
 
 // - Crea una función que reciba un array de números y un número y te devuelva un array con los números que sean divisores de ese número
 
 
+const arrayNumbers = (array, number) => {
+
+    const numbers = array.filter(division => {
+        return division % number === 0
+    })
+    console.log(numbers)
+}
+arrayNumbers([10, 30, 44, 32, 61], 5)
 
 
 
@@ -225,6 +232,24 @@ fiveWordAndLetter(['coche', 'perro', 'casa', 'gato', 'camion'], 5)
 //   { name: 'Jane', age: 30 },
 //   { name: 'Bob', age: 20 }
 //   ];
+
+
+const array = [
+    { name: 'John', age: 25 },
+    { name: 'Jane', age: 30 },
+    { name: 'Bob', age: 20 }
+];
+
+
+const usersAge = array => {
+    const results = array.filter(user => {
+        return user.age < 30
+    })
+    return results
+}
+console.log(usersAge(array))
+
+
 
 
 
