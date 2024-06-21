@@ -240,7 +240,6 @@ const array = [
     { name: 'Bob', age: 20 }
 ];
 
-
 const usersAge = array => {
     const results = array.filter(user => {
         return user.age < 30
@@ -251,18 +250,96 @@ console.log(usersAge(array))
 
 
 
-
-
-
 // - Crea una función que reciba un array relleno con números y te diga si todos son pares o no.
 
+const arrayOddAndEven = array=> {
+
+const odd = array.every(number=> {
+    return number% 2===0
+})
+if(odd){
+    console.log(`son pares`)
+}else{
+    console.log(`no son pares`)
+}
+}
+
+arrayOddAndEven([2,4,10,12,14,16])
 
 
 
 // - Crea una función que reciba un array de 5 palabras y las ordene en base a su longitud, de menor a mayor.
 
 
+const sortByLength = words => {
+    words.sort((a, b) => a.length - b.length);
+    console.log(words);
+  };
+  
+  sortByLength(['hola', 'adios', 'gato', 'perro', 'casa']);
+
 
 
 
 // - Crea una función que reciba una palabra e imprima la misma palabra en orden inverso conservando las mayúsculas y las minúsculas. Si recibe "Mariposas" deberá imprimir "sasopiraM". No se puede usar reverse() 😊 (investiga la función reduceRight)
+
+const reverseWord = word => {
+    const splittedWord = word.split('');
+  
+    const newWord = splittedWord.reduceRight((acc, letter) => {
+      return acc + letter;
+    });
+  
+    const newWord2 = splittedWord.reduce((acc, letter) => {
+      return letter + acc;
+    });
+  
+    console.log(newWord);
+    console.log(newWord2);
+  };
+  
+  reverseWord('Mariposas');
+
+
+// ## Retos!!
+
+// 18 - Crea una función que reciba un array de 5 números de 2 dígitos. La función debe ser capaz de sumar los digitos de cada número, es decir si yo le envío [21, 34, 87, 10, 28] la función tendrá que ser capaz de devolverme un array con [3, 7, 15, 1, 10]
+
+// Utilizando el array que te dejo a continuación resuelve estos dos retos.
+
+// 19 - Crea una función que reciba un criterio de ordenación y ordene el array en base a ese criterio. Puede ser el nombre, el apellido o la edad.
+
+// 20 - Crea una función que reciba un id de usuario y borre ese usuario del array.
+
+//     const users = [
+//     {
+//     id: "user001",
+//     name: "Juan",
+//     surname: "Pérez",
+//     age: 30
+//     },
+//     {
+//     id: "user002",
+//     name: "María",
+//     surname: "González",
+//     age: 25
+//     },
+//     {
+//     id: "user003",
+//     name: "Pedro",
+//     surname: "Sánchez",
+//     age: 35
+//     },
+//     {
+//     id: "user004",
+//     name: "Ana",
+//     surname: "Martínez",
+//     age: 28
+//     },
+//     {
+//     id: "user005",
+//     name: "Luis",
+//     surname: "López",
+//     age: 40
+//     }
+//     ];
