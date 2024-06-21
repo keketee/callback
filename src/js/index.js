@@ -200,9 +200,14 @@ tenNumbers([1, 2, 3, 4, 0, 1, 2, 3, 0, 1])
 // - Crea una función que reciba un array de 5 palabras y un número y te devuelva un array con las palabras que tienen esa longitud, por ejemplo si le envias (['hola', 'adios', 'gato', 'perro', 'casa'], 4), te devolverá un array con ['hola', 'gato', 'casa']
 
 
+const fiveWordAndLetter = (array, number) => {
 
 
 
+
+}
+
+fiveWordAndLetter(['coche', 'perro', 'casa', 'gato', 'camion'], 5)
 
 
 
